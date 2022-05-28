@@ -29,6 +29,9 @@ public:
     }
     
     TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+        if(preorder.size() != inorder.size())
+            return nullptr;
+        
         unordered_map<int, int> inoderNodeMap;
         for(int i = 0; i< inorder.size(); i++)
         {
